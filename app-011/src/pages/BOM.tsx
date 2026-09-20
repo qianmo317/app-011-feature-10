@@ -24,7 +24,9 @@ export default function BOM() {
     if (isNaN(price)) return;
     updateMaterials(
       plan.id,
-      plan.materials.map((m) => (m.id === matId ? { ...m, price } : m))
+      plan.materials.map((m) =>
+        m.id === matId ? { ...m, price, priceUpdatedAt: Date.now() } : m
+      )
     );
     setEditingMat(null);
   };
@@ -111,7 +113,11 @@ export default function BOM() {
                         style={{ width: 80 }}
                       />
                     ) : (
-                      <span onClick={() => { setEditingMat(r.matId); setEditPrice(String(mat?.price || 0)); }} style={{ cursor: 'pointer', textDecoration: 'underline' }}>
+                      <span
+                        onClick={() => { setEditingMat(r.matId); setEditPrice(String(mat?.price || 0)); }}
+                        title={mat?.priceUpdatedAt ? `上次改价：${new Date(mat.priceUpdatedAt).toLocaleString()}` : '无改价记录（创建时保存的单价）'}
+                        style={{ cursor: 'pointer', textDecoration: 'underline' }}
+                      >
                         ¥{mat?.price.toFixed(2) || 0}
                       </span>
                     )}

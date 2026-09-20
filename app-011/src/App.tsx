@@ -4,6 +4,7 @@ import PlanEditor from './pages/PlanEditor'
 import WallEditor from './pages/WallEditor'
 import BOM from './pages/BOM'
 import PrintView from './pages/PrintView'
+import Compare from './pages/Compare'
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
       <main>
         <Routes>
           <Route path="/" element={<PlanList />} />
+          <Route path="/compare/:aId/:bId" element={<Compare />} />
           <Route path="/plan/:id" element={<PlanEditor />} />
           <Route path="/plan/:id/walls" element={<WallEditor />} />
           <Route path="/plan/:id/bom" element={<BOM />} />

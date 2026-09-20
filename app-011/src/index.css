@@ -203,6 +203,94 @@ tr:hover {
   background: #f8f9fa;
 }
 
+/* 方案比选 */
+.btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+input[type='checkbox'] {
+  width: 16px;
+  height: 16px;
+  cursor: pointer;
+}
+
+.alert {
+  padding: 12px 16px;
+  border-radius: 4px;
+  margin-bottom: 16px;
+  font-size: 13px;
+  line-height: 1.9;
+}
+
+.alert-warning {
+  background: #fef9e7;
+  border: 1px solid #f7dc6f;
+  color: #7d6608;
+}
+
+.alert-info {
+  background: #eaf2f8;
+  border: 1px solid #aed6f1;
+  color: #1b4f72;
+}
+
+.verdict {
+  padding: 14px 18px;
+  border-radius: 4px;
+  margin-bottom: 16px;
+  font-size: 15px;
+  background: #eaf2f8;
+  border: 1px solid #3498db;
+  color: #1b4f72;
+}
+
+.badge {
+  display: inline-block;
+  padding: 1px 6px;
+  border-radius: 3px;
+  font-size: 11px;
+  margin-left: 6px;
+  white-space: nowrap;
+}
+
+.badge-warn {
+  background: #fdf2e3;
+  color: #e67e22;
+  border: 1px solid #f5cba7;
+}
+
+.badge-info {
+  background: #eaf2f8;
+  color: #2980b9;
+  border: 1px solid #aed6f1;
+}
+
+.diff-pos {
+  color: #e74c3c;
+  font-weight: 500;
+}
+
+.diff-neg {
+  color: #27ae60;
+  font-weight: 500;
+}
+
+.diff-zero {
+  color: #999;
+}
+
+.cell-max {
+  font-weight: 600;
+  color: #2c3e50;
+}
+
+.compare-note {
+  font-size: 12px;
+  color: #888;
+  margin-top: 8px;
+}
+
 @media print {
   .app-header,
   .toolbar,

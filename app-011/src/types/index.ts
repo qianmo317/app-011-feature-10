@@ -44,6 +44,8 @@ export interface MatSpec {
   coverage?: number;
   lossRate: number;
   price: number;
+  /** 单价最近一次手动修改时间(ms)；无记录为 undefined */
+  priceUpdatedAt?: number;
 }
 
 export interface Plan {
