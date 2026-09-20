@@ -24,7 +24,9 @@ export default function BOM() {
     if (isNaN(price)) return;
     updateMaterials(
       plan.id,
-      plan.materials.map((m) => (m.id === matId ? { ...m, price } : m))
+      plan.materials.map((m) =>
+        m.id === matId ? { ...m, price, priceUpdatedAt: Date.now() } : m
+      )
     );
     setEditingMat(null);
   };

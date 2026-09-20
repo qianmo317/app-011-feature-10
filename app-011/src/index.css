@@ -91,6 +91,40 @@ main {
   background: #c0392b;
 }
 
+.btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.badge {
+  display: inline-block;
+  padding: 1px 6px;
+  border-radius: 3px;
+  font-size: 12px;
+  margin-left: 6px;
+  vertical-align: middle;
+}
+
+.badge-warn {
+  background: #fdf0e4;
+  color: #d35400;
+  border: 1px solid #e67e22;
+}
+
+.badge-info {
+  background: #eaf2fb;
+  color: #2980b9;
+  border: 1px solid #3498db;
+}
+
+.compare-bar {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+  flex-wrap: wrap;
+  border: 1px solid #3498db;
+}
+
 .card {
   background: white;
   border-radius: 8px;
